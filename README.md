@@ -1,2 +1,2 @@
 # dongbaek.github.io
-동백투어 리디자인
+동백여행사 리디자인
