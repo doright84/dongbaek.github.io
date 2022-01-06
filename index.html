@@ -22,29 +22,78 @@
     <!-- swiper -->
     <link rel="stylesheet" href="js/swiper/swiper.min.css">
     <script src="js/swiper/swiper.min.js"></script>
+    <!-- aos -->
+    <link href="js/aos/aos.css" rel="stylesheet">
+    <script src="js/aos/aos.js"></script>
+
     <script src="js/script.js"></script>
+
     <!-- normalize.css -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 
 <body>
     <div class="wrap">
+        <div class="head-top clearfix">
+            <a href="#" class="logo"></a>
+            <div class="head-gnb">
+                <ul class="head-menu">
+                    <li>
+                        <a href="#">당일여행</a>
+                        <ul class="sub-menu">
+                            <li><a href="#"></a>일반여행</li>
+                            <li><a href="#"></a>우등버스</li>
+                            <li><a href="#"></a>맛기행</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">숙박여행</a>
+                        <ul class="sub-menu">
+                            <li><a href="#"></a>1박2일</li>
+                            <li><a href="#"></a>2박3일</li>
+                            <li><a href="#"></a>맛기행</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">버스여행</a>
+                        <ul class="sub-menu">
+                            <li><a href="#"></a>당일</li>
+                            <li><a href="#"></a>1박2일</li>
+                            <li><a href="#"></a>2박3일</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">기차여행</a>
+                        <ul class="sub-menu">
+                            <li><a href="#"></a>당일</li>
+                            <li><a href="#"></a>1박2일</li>
+                            <li><a href="#"></a>2박3일</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">제주도여행</a>
+                        <ul class="sub-menu">
+                            <li><a href="#"></a>패키지</li>
+                            <li><a href="#"></a>노팁 노옵션</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">자유여행</a>
+                        <ul class="sub-menu">
+                            <li><a href="#"></a>배낭여행</li>
+                            <li><a href="#"></a>자전거여행</li>
+                            <li><a href="#"></a>버스여행</li>
+                            <li><a href="#"></a>기차여행</li>
+                            <li><a href="#"></a>렌트카여행</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <!-- head  -->
         <section class="head">
-            <div class="head-top clearfix">
-                <a href="#" class="logo"></a>
-                <div class="head-gnb">
-                    <ul class="head-menu">
-                        <li><a href="#">당일여행</a></li>
-                        <li><a href="#">숙박여행</a></li>
-                        <li><a href="#">버스여행</a></li>
-                        <li><a href="#">기차여행</a></li>
-                        <li><a href="#">제주도여행</a></li>
-                        <li><a href="#">자유여행</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="head-bg-img">
                 <div class="swiper-container head-sw-container">
                     <div class="swiper-wrapper">
@@ -65,9 +114,10 @@
                 <span class="head-bg-line"></span>
             </div>
         </section>
+
         <!-- //head//  -->
         <!-- search -->
-        <section class="serch">
+        <section class="serch" data-aos="fade-up" data-aos-duration="2000">
             <div class="container">
                 <div class="serch-box box-f">
                     <h2 class="serch-box-title">준비 되셨나요? 떠날 준비!</h2>
@@ -107,7 +157,7 @@
         </section>
         <!-- //search// -->
         <!-- best -->
-        <section class="best">
+        <section class="best" data-aos="fade-up" data-aos-duration="2000">
             <div class="container">
                 <h2 class="menu-title">Best 기획전</h2>
                 <ul class="best-cont">
@@ -165,29 +215,159 @@
         </section>
         <!-- //best// -->
         <!-- thema  -->
-        <section class="thema">
+        <section class="thema" data-aos="fade-up" data-aos-duration="2000">
             <div class="container">
                 <h2 class="menu-title">테마여행 추천</h2>
                 <ul class="thema-menu clearfix">
-                    <li class="thema-on" onclick="return false"><a href="#" class="thema-txt-on">혼자서 자유롭게! 혼자여행</a></li>
-                    <li><a href="#" onclick="return false">둘이서 알콩달콩! 커플여행</a></li>
-                    <li><a href="#" onclick="return false">부모님을 모시고! 효도여행</a></li>
-                    <li><a href="#" onclick="return false">친구들과 여럿이! 우정여행</a></li>
+                    <li class="thema-on">
+                        <a href="#" class=" thema-txt-on thema-title" onclick="return false">혼자서 자유롭게! 혼자여행</a>
+                        <div class="thema-cont">
+                            <ul class="thema-list">
+                                <li>
+                                    <span class="thema-list-img thema-img1">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">JEONJU</p>
+                                            <p class="thema-cont-han">전동성당</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img2">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">GYEONGJU</p>
+                                            <p class="thema-cont-han">첨성대</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img3">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">POHANG</p>
+                                            <p class="thema-cont-han">호미곶</p>
+                                        </span>
+                                    </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 2메뉴 -->
+                    <li>
+                        <a href="#" class="thema-title" onclick="return false">둘이서 알콩달콩! 커플여행</a>
+                        <div class="thema-cont">
+                            <ul class="thema-list">
+                                <li>
+                                    <span class="thema-list-img thema-img4">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">BUSAN</p>
+                                            <p class="thema-cont-han">해운대</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img5">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">JEJU ISLAND</p>
+                                            <p class="thema-cont-han">협재 해수욕장</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img6">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">DAEGU</p>
+                                            <p class="thema-cont-han">이월드 타워</p>
+                                        </span>
+                                    </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3메뉴 -->
+                    <li>
+                        <a href="#" class="thema-title" onclick="return false">부모님을 모시고! 효도여행</a>
+                        <div class="thema-cont">
+                            <ul class="thema-list">
+                                <li>
+                                    <span class="thema-list-img thema-img7">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">YEOSU</p>
+                                            <p class="thema-cont-han">하멜등대</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img8">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">DAMYANG</p>
+                                            <p class="thema-cont-han">죽녹원</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img9">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">SANCHUNG</p>
+                                            <p class="thema-cont-han">지리산 천왕봉</p>
+                                        </span>
+                                    </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 4메뉴 -->
+                    <li>
+                        <a href="#" class="thema-title" onclick="return false">친구들과 여럿이! 우정여행</a>
+                        <div class="thema-cont">
+                            <ul class="thema-list">
+                                <li>
+                                    <span class="thema-list-img thema-img10">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">SEOUL</p>
+                                            <p class="thema-cont-han">경복궁</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img11">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">CHOONCHUN</p>
+                                            <p class="thema-cont-han">구봉산 전망대</p>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="thema-list-img thema-img12">
+                                        <span class="thema-list-cont">
+                                            <a href="#" class="thema-cont-bt">Read More</a>
+                                            <p class="thema-cont-eng">SOONCHUN</p>
+                                            <p class="thema-cont-han">국가정원박람회</p>
+                                        </span>
+                                    </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-                <div class="thema-cont">
-                    <ul class="thema-list">
-                        <li>
-                            <span class="thema-list-img thema-img1">
-                                <a href="#"></a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </section>
         <!-- //thema//  -->
         <!-- banner  -->
-        <section class="banner">
+        <section class="banner" data-aos="fade-in" data-aos-duration="2000">
             <div class="container clearfix">
                 <span class="banner-cont"></span>
                 <div class="banner-right">
@@ -198,7 +378,7 @@
         </section>
         <!-- //banner//  -->
         <!-- recommend  -->
-        <section class="recommend">
+        <section class="recommend" data-aos="fade-up" data-aos-duration="2000">
             <div class="container">
                 <!-- 버스여행 부릉 -->
                 <div class="recom-bus">
@@ -477,9 +657,13 @@
                                         알찼었어요! 날씨가 안좋아서</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+
+                </div>
+                <div class="review-navigation clearfix">
+                    <span class="review-navi review-prev"></span>
+                    <span class="review-navi review-next"></span>
                 </div>
             </div>
         </section>
