@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    AOS.init({
+        once: true
+    });
+// ---scroll----
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0) {
             $('.head-top').addClass('head-top-on')
@@ -11,31 +15,53 @@ $(document).ready(function () {
         }
     })
 
-    // 헤더
+    // -----header------
+    // 헤더 slide
     let head_sw = new Swiper('.head-sw-container', {
         loop: true,
         autoplay: {
-            delay: 3500,
+            delay: 4000,
             disableOnInteraction: false,
         },
         speed: 800,
         effect: 'fade',
         fadeEffect: {
             crossFade: true
-        }
+        },
+
+    });
+    $('.head-gnb').mouseenter(function () {
+        $('.sub-menu').stop().fadeIn();
+        $('.head-top').addClass('head-top-on')
+        $('.head-menu>li>a').addClass('head-menu-txt-on')
+        $('.logo').addClass('logo-on')
+    });
+    $('.head-gnb').mouseleave(function () {
+        $('.sub-menu').stop().fadeOut();
+        $('.head-top').removeClass('head-top-on')
+        $('.head-menu>li>a').removeClass('head-menu-txt-on')
+        $('.logo').removeClass('logo-on')
     });
 
-
+    //-----thema-----
     // 테마 -하나 클릭시 다른거 사라짐-
-    $('.thema-menu li').each(function () {
+    $(".thema-cont").hide().eq(0).show()
+    $('.thema-menu>li').each(function () {
         $(this).click(function () {
             $(this).addClass('thema-on'); //클릭된 부분을 상단에 정의된 CCS인 selected클래스로 적용
             $(this).siblings().removeClass('thema-on'); //siblings:형제요소들,    removeClass:선택된 클래스의 특성을 없앰
-            $('.thema-menu a').removeClass('thema-txt-on');
-            $(this).children().addClass('thema-txt-on');
+            $('.thema-title').removeClass('thema-txt-on');
+            $(this).children('.thema-title').addClass('thema-txt-on');
+            $(".thema-cont").hide()
+            $(this).find(".thema-cont").show()
         });
     });
+    // $(".thema-menu li").click(function(){
+    //     let i = $(this).index();
+    //     $(".thema-cont").hide().eq(i).show()
+    // })
 
+//---------recommend-----------
     // 추천 recommend
     let bus_sw = new Swiper('.bus-sw-container', {
         loop: true,
@@ -70,6 +96,8 @@ $(document).ready(function () {
         },
     });
 
+
+    //-----review---------
     let review_sw = new Swiper('.review-sw-container', {
         loop: true,
         slidesPerView: 5,
@@ -79,5 +107,10 @@ $(document).ready(function () {
             disableOnInteraction: false,
         },
         speed: 800,
+        navigation: {
+            nextEl: '.review-next',
+            prevEl: '.review-prev',
+        },
+
     });
 });
