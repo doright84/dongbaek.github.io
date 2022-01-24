@@ -2,7 +2,11 @@ $(document).ready(function () {
     AOS.init({
         once: true
     });
-// ---scroll----
+     // 안내창 닫기
+     $('.modal').click(function () {
+        $('.modal').fadeOut();
+    });
+    // ---scroll----
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0) {
             $('.head-top').addClass('head-top-on')
@@ -14,7 +18,19 @@ $(document).ready(function () {
             $('.logo').removeClass('logo-on')
         }
     })
-
+    $('.head-gnb').mouseenter(function () {
+        $('.sub-menu').stop().fadeIn();
+        $('.head-top').addClass('head-top-hover-on')
+        $('.head-menu>li>a').addClass('head-menu-txt-h-on')
+        $('.logo').addClass('logo-on')
+    });
+    $('.head-gnb').mouseleave(function () {
+        $('.sub-menu').stop().fadeOut();
+        $('.head-top').removeClass('head-top-hover-on')
+        $('.head-menu>li>a').removeClass('head-menu-txt-h-on')
+        $('.logo').removeClass('logo-on')
+    });
+ 
     // -----header------
     // 헤더 slide
     let head_sw = new Swiper('.head-sw-container', {
@@ -30,19 +46,6 @@ $(document).ready(function () {
         },
 
     });
-    $('.head-gnb').mouseenter(function () {
-        $('.sub-menu').stop().fadeIn();
-        $('.head-top').addClass('head-top-on')
-        $('.head-menu>li>a').addClass('head-menu-txt-on')
-        $('.logo').addClass('logo-on')
-    });
-    $('.head-gnb').mouseleave(function () {
-        $('.sub-menu').stop().fadeOut();
-        $('.head-top').removeClass('head-top-on')
-        $('.head-menu>li>a').removeClass('head-menu-txt-on')
-        $('.logo').removeClass('logo-on')
-    });
-
     //-----thema-----
     // 테마 -하나 클릭시 다른거 사라짐-
     $(".thema-cont").hide().eq(0).show()
@@ -61,7 +64,7 @@ $(document).ready(function () {
     //     $(".thema-cont").hide().eq(i).show()
     // })
 
-//---------recommend-----------
+    //---------recommend-----------
     // 추천 recommend
     let bus_sw = new Swiper('.bus-sw-container', {
         loop: true,
